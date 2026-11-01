@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pour Sweety ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;min-height:100vh;display:flex;align-items:center;
+  justify-content:center;text-align:center;padding:20px;
+  font-family:Georgia,serif;color:#743b50;
+  background:linear-gradient(135deg,#ffe4ec,#fff2e8,#f8d9e8);
+  overflow:hidden;
+}
+.card{
+  background:#ffffffd9;padding:35px 25px;border-radius:25px;
+  max-width:420px;width:100%;box-shadow:0 12px 40px #b76b8430;
+}
+h1{color:#c45d7c}
+button{
+  background:#d66d8d;color:white;border:0;border-radius:30px;
+  padding:14px 25px;font-size:16px;margin-top:15px;
+}
+#letter{display:none;line-height:1.8;margin-top:22px}
+.heart{position:fixed;bottom:-30px;animation:up 7s linear infinite;opacity:.6}
+@keyframes up{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="card">
+  <div style="font-size:55px">💌</div>
+  <h1>Pour ma Sweety ❤️</h1>
+  <p>J'ai quelque chose de spécial à te dire...</p>
+  <button onclick="openLetter()">Ouvre ton petit cadeau 💕</button>
+  <div id="letter">
+    <h2>Ma Sweety ❤️</h2>
+    <p>
+      Je voulais simplement te rappeler à quel point tu es spéciale
+      pour moi. Ton sourire apporte de la douceur à mes journées
+      et ta présence rend ma vie plus belle.
+    </p>
+    <p>
+      Même les mots les plus doux ne suffisent pas toujours
+      à exprimer ce que je ressens pour toi.
+      Je suis heureux de t'avoir dans ma vie.
+    </p>
+    <p>Avec tout mon amour ❤️</p>
+    <h2>Je t'aime, Sweety 💖</h2>
+  </div>
+</div>
+<script>
+function openLetter(){
+  document.getElementById("letter").style.display="block";
+}
+for(let i=0;i<18;i++){
+  let h=document.createElement("div");
+  h.className="heart";h.textContent="❤️";
+  h.style.left=Math.random()*100+"%";
+  h.style.animationDelay=Math.random()*7+"s";
+  h.style.fontSize=(15+Math.random()*20)+"px";
+  document.body.appendChild(h);
+}
+</script>
+</body>
+</html>
